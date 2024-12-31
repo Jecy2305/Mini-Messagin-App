@@ -29,7 +29,6 @@ export const useMessages = () => {
     try {
       const message = await createMessage(newMessage);
       setMessages(prevMessages => [...prevMessages, message]);
-      await getMessages();
     } catch (err) {
       console.log(err.message);
     }
