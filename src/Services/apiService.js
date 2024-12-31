@@ -1,4 +1,4 @@
-const API_URL = "https://localhost:44364/api";
+const API_URL = "https://api-mini-messaging-app.azurewebsites.net/api";
 
 const apiRequest = async (endpoint, method = "GET", body = null) => {
   const options = {
