@@ -1,0 +1,265 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root{
+  height: 100vh;
+  width: 100%;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #131824;
+}
+
+main{
+  max-width: 56rem;
+  margin: auto;
+  padding: 1rem;
+}
+
+header{
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  border-radius: .5rem;
+  width: 100%;
+  backdrop-filter: blur(0.375rem);
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out; 
+  margin-bottom: 2rem;
+}
+
+header h2{
+  background-image: linear-gradient(to right, #a78bfa, #ec4899);
+  background-clip: text;
+  color: transparent;
+}
+
+header button {
+  display: flex;
+  align-items: center;
+  padding: .6rem;
+  background-image: linear-gradient(to right, #a855f7, #ec4899);
+  border-radius: 1.5rem;
+  outline: none;
+  border: none;
+  gap: 1rem;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-image: linear-gradient(to right, #9333ea, #db2777);
+}
+
+header button svg{
+  width: 20px;
+  height: 20px;
+}
+
+.content-menssages-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+article {
+  padding: 1rem;
+  display: flex;
+  width: 100%;
+  color: white;
+  border-radius: .5rem;
+  align-items: flex-start;
+  backdrop-filter: blur(0.375rem);
+  background-color: rgba(0, 0, 0, 0.2); 
+  transition: all 0.2s ease-in-out; 
+  gap: 1rem;
+}
+
+article:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.article-content{
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+.article-content-img{
+  height: 50px;
+  width:  50px;
+  border-radius: 50%;
+  background-color: white;
+  border: 4px solid #a472d9;
+}
+
+.article-content-texts{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.article-content-texts-header{
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+#span-content-username {
+  font-weight: 500;
+  color: #a472d9;
+}
+
+#span-content-time {
+  color: #a6afbd;
+}
+
+.article-buttons{
+  display: flex;
+  gap: .5rem;
+}
+
+article button{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: none;
+  transition: background-color .2s ease-in-out;
+}
+
+article button svg{
+  pointer-events: none;
+  flex-shrink: 0;
+  height: 1rem;
+  width: 1rem; 
+}
+
+#article-buttons-button-edit{
+  color: #a472d9;
+}
+
+#article-buttons-button-delete{
+  color: #f472b6;
+}
+
+#article-buttons-button-edit:hover{
+  color: #a472d9;
+  background-color: #2b1d43;
+}
+
+#article-buttons-button-delete:hover{
+  color: #f472b6;
+  background-color: #381a32;
+}
+
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay__content {
+  width: 450px;
+  background-color: #1a1f2c; /*COLOR PARA LOS MODALES*/
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /*SOMBRA PARA LOS MODALES*/
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-content-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header-content-texts h3{
+  color: white;
+}
+
+.header-content-texts p{
+  font-size: .9rem;
+  color: #61626d;
+}
+
+.icon-button-x {
+  background: transparent; /* Botón sin fondo */
+  border: 1px solid transparent; /* Sin borde visible, puede ser cambiado si se necesita un borde */
+  cursor: pointer; /* Mostrar cursor de puntero */
+  display: inline-flex; /* Para alinear los íconos correctamente dentro del botón */
+  align-items: center; /* Centrar verticalmente los íconos */
+  justify-content: center; /* Centrar horizontalmente los íconos */
+  transition: color 0.3s ease;
+  color: #aba8a4;
+}
+
+.icon-button-x:hover {
+  color: white;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario textarea{
+  display: flex;
+  min-height: 90px;
+  width: 100%;
+  border-radius: .5rem;
+  border: 1px solid #2d3748; 
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  background-color: #0a0f1a;
+  color: white;
+  resize: none;
+}
+
+.formulario label{
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #a78bfa, #ec4899);
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  font-size: 1rem;
+  gap: .5rem;
+}
+
+.formulario input{
+  display: flex;
+  width: 100%;
+  border-radius: .5rem;
+  border: 1px solid #2d3748; 
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  background-color: #0a0f1a;
+  color: white;
+  resize: none;
+}
